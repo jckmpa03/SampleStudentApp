@@ -1,0 +1,52 @@
+<beans:beans xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--	  
+	<context:component-scan base-package="com.progress.notes" />
+    <security:http use-expressions="true" >
+
+
+		<security:intercept-url pattern="/calendar/**" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/profile/**" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/welcome" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/iprofile" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/pnote/**" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/gpnote/**" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/iprognote" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/udcnote" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/facilityReport" access="hasRole('ROLE_ADMIN')" />
+		
+		
+		<security:access-denied-handler error-page="/403" />
+
+		<security:form-login
+		    login-page="/login"
+		    default-target-url="/welcome"
+		    login-processing-url="/j_spring_security_check"
+			authentication-failure-url="/login?error"
+			username-parameter="username"
+			password-parameter="password" />
+		<security:logout logout-success-url="/login?logout" invalidate-session="true" logout-url="/logout"  />
+		
+		<security:csrf/>
+	</security:http>
+
+	<security:authentication-manager>
+	  <security:authentication-provider>
+		<security:jdbc-user-service data-source-ref="dataSource"
+		  users-by-username-query=
+		    "select username,password, enabled from user where username=?"
+		  authorities-by-username-query=
+		    "select username, role from user_role where username =?  " />
+	  </security:authentication-provider>
+	</security:authentication-manager>
+-->
+</beans:beans>
